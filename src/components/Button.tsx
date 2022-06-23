@@ -7,7 +7,7 @@ interface ButtonProps {
   className?: string;
 }
 
-export default function Button(props: ButtonProps) {
+export function Button(props: ButtonProps) {
   const { text, href, className, icon } = props;
 
   return (

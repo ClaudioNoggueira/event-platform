@@ -1,12 +1,19 @@
-import { CaretRight, FileArrowDown, Image } from "phosphor-react";
-import Button from "./Button";
+import { DefaultUi, Player, Youtube } from "@vime/react";
 import { VideoCard } from "./VideoCard";
+import { Button } from "./Button";
+
+import "@vime/core/themes/default.css";
 
 export default function Video() {
   return (
     <div className="flex-1">
       <div className="bg-black flex justify-center">
-        <div className="bg-zinc-500 h-full w-full max-w-[1100px] max-h-[60vh] aspect-video"></div>
+        <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
+          <Player>
+            <Youtube videoId="Ox_zb2cs9zM" />
+            <DefaultUi />
+          </Player>
+        </div>
       </div>
 
       <div className="p-8 max-w-[1100px] mx-auto">
