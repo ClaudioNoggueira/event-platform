@@ -23,7 +23,7 @@ interface GetLessonsQueryResponse {
   }[];
 }
 
-export default function Sidebar() {
+export function Sidebar() {
   const { data } = useQuery<GetLessonsQueryResponse>(GET_LESSONS_QUERY);
 
   return (

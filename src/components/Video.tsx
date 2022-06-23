@@ -4,7 +4,13 @@ import { Button } from "./Button";
 
 import "@vime/core/themes/default.css";
 
-export default function Video() {
+interface VideoProps {
+  lessonSlug: string;
+}
+
+export function Video(props: VideoProps) {
+  const { lessonSlug } = props;
+
   return (
     <div className="flex-1">
       <div className="bg-black flex justify-center">
