@@ -16,7 +16,9 @@ export function Subscribe() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
-  const [createSubscriber, { data }] = useMutation(CREATE_SUBSCRIBER_MUTATION);
+  const [createSubscriber, { loading }] = useMutation(
+    CREATE_SUBSCRIBER_MUTATION
+  );
 
   const navigate = useNavigate();
 
@@ -77,7 +79,8 @@ export function Subscribe() {
             />
 
             <button
-              className="text-sm rounded font-bold uppercase gap-2 cursor-pointer mt-4 bg-green-500 py-4 hover:bg-green-700 hover:transition-colors"
+              className="text-sm rounded font-bold uppercase gap-2 cursor-pointer mt-4 bg-green-500 py-4 hover:bg-green-700 hover:transition-colors disabled:opacity-50"
+              disabled={loading}
               type="submit"
             >
               Garantir a minha vaga
