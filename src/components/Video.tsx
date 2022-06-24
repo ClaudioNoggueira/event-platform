@@ -1,6 +1,6 @@
 import { DefaultUi, Player, Youtube } from "@vime/react";
 import { VideoCard } from "./VideoCard";
-import { Button } from "./Button";
+import { AnchorButton } from "./AnchorButton";
 
 import "@vime/core/themes/default.css";
 import { gql, useQuery } from "@apollo/client";
@@ -77,14 +77,14 @@ export function Video(props: VideoProps) {
             <p className="text-gray-400 leading-relaxed">{description}</p>
           </div>
           <div className="flex flex-col gap-4">
-            <Button
+            <AnchorButton
               href="#"
               text="Comunidade do Discord"
               icon="Discord"
               className="bg-green-500 hover:bg-green-700 transition-colors"
             />
 
-            <Button
+            <AnchorButton
               href="#"
               text="Acesse o desafio"
               icon="Lightning"

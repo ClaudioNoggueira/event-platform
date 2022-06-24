@@ -1,13 +1,13 @@
 import { DiscordLogo, Lightning } from "phosphor-react";
 
-interface ButtonProps {
+interface AnchorButtonProps {
   text: string;
   href?: string;
   icon?: string;
   className?: string;
 }
 
-export function Button(props: ButtonProps) {
+export function AnchorButton(props: AnchorButtonProps) {
   const { text, href, className, icon } = props;
 
   return (
